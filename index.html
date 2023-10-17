@@ -1,0 +1,723 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta lang="ru">
+    <title>taroMatrix</title>
+</head>
+<body>
+    
+    <div>
+        <form>
+            <input type="text" placeholder="ДД.ММ.ГГГГ" id="date"><br>
+            <input type="text" readonly>
+            <input type="text" readonly value="КД" class="yellow">
+            <input type="text" readonly value="КМ" class="yellow">
+            <input type="text" readonly value="КГ" class="yellow">
+            <input type="text" readonly value="KC" class="yellow">
+            <input type="text" readonly value="CP" class="yellow"><br>
+                
+            <input type="text" value="КЖП" id="kjp" readonly class="yellow">
+            <input type="text" readonly class="lightgreen">
+            <input type="text" readonly class="lightgreen">
+            <input type="text" readonly>
+            <input type="text" readonly class="lightgreen">
+            <input type="text" readonly class="lightgreen"><br>
+                
+            <input type="text" value="КС" id="kc" readonly class="yellow">
+            <input type="text" readonly class="lightgreen">
+            <input type="text" readonly class="lightgreen">
+            <input type="text" readonly class="lightgreen">
+            <input type="text" readonly class="lightgreen">
+            <input type="text" readonly class="lightgreen"><br>
+                
+            <input type="text" value="КК" id="kk" readonly class="yellow">
+            <input type="text" readonly class="red">
+            <input type="text" readonly class="red">
+            <input type="text" readonly class="red">
+            <input type="text" readonly class="red">
+            <input type="text" readonly class="red"><br>
+                
+            <input type="text" readonly value="T" class="peach">
+            <input type="text" readonly class="peach">
+            <input type="text" readonly class="peach">
+            <input type="text" readonly class="peach">
+            <input type="text" readonly class="peach">
+            <input type="text" readonly class="peach" value="&#8734"><br>
+            <input type="button" value="Рассчитать" id="calc">
+            <input type="reset" id="reset">
+        </form>
+    </div><br>
+
+    <div>
+        <form>
+            <input type="text" placeholder="ДД.ММ.ГГГГ" id="date2"><br>
+
+            <input type="text" readonly>
+            <input type="text" readonly value="КД" class="yellow">
+            <input type="text" readonly value="КМ" class="yellow">
+            <input type="text" readonly value="КГ" class="yellow">
+            <input type="text" readonly value="KC" class="yellow">
+            <input type="text" readonly value="CP" class="yellow"><br>
+                
+            <input type="text" value="КЖП" id="kjp" readonly class="yellow">
+            <input type="text" readonly class="lightgreen">
+            <input type="text" readonly class="lightgreen">
+            <input type="text" readonly>
+            <input type="text" readonly class="lightgreen">
+            <input type="text" readonly class="lightgreen"><br>
+                
+            <input type="text" value="КС" id="kc" readonly class="yellow">
+            <input type="text" readonly class="lightgreen">
+            <input type="text" readonly class="lightgreen">
+            <input type="text" readonly class="lightgreen">
+            <input type="text" readonly class="lightgreen">
+            <input type="text" readonly class="lightgreen"><br>
+                
+            <input type="text" value="КК" id="kk" readonly class="yellow">
+            <input type="text" readonly class="red">
+            <input type="text" readonly class="red">
+            <input type="text" readonly class="red">
+            <input type="text" readonly class="red">
+            <input type="text" readonly class="red"><br>
+                
+            <input type="text" readonly value="T" class="peach">
+            <input type="text" readonly class="peach">
+            <input type="text" readonly class="peach">
+            <input type="text" readonly class="peach">
+            <input type="text" readonly class="peach">
+            <input type="text" readonly class="peach" value="&#8734"><br>
+            <input type="button" value="Рассчитать" id="calc2">
+            <input type="reset" id="reset2">
+        </form>
+    </div>
+        
+    <hr><h3>Прогностика по годам в паре </h3>
+    <table>
+        <form>
+            <tbody>
+                <tr style="text-align: center">
+                    <td colspan="5" class="green">Кверент_1</td>
+                    <td colspan="4"><input type="text" placeholder="ДД.ММ.ГГГГ" class="goldInputs"></td>
+                </tr>
+                <tr style="text-align: center;">
+                    <td colspan="5" class="green">Кверент_2</td>
+                    <td colspan="4"><input type="text" placeholder="ДД.ММ.ГГГГ" class="goldInputs"></td>
+                </tr>
+                <tr style="text-align: center;">
+                    <td colspan="5" rowspan="3" class="green">На какой год?</td>
+                    <td colspan="4"><input type="text" placeholder="ГГГГ" class="goldInputs"></td>
+                </tr>
+                <tr style="color: red;">
+                    <td colspan="4"><input type="text" placeholder="ГГГГ" class="goldInputs""></td>
+                </tr>
+                <tr>
+                    <td colspan="4"><input type="text" placeholder="ГГГГ" class="goldInputs"></td>
+                </tr>
+
+                <tr>
+                    <td colspan="5"><input type="button" value="Рассчитать" id="calc3" class="yellowGreen"></td>
+                    <td colspan="4"><input type="reset" id="reset3" class="indianRed"></td>
+                </tr>
+
+                <tr style="background-color: gold;">
+                    <td style="width: 14%; text-align: center;">Год</td>
+                    <td style="width: 6%; text-align: center;">ЛЦ_1</td>
+                    <td style="width: 6%; text-align: center;">АР_1</td>
+                    <td style="width: 6%; text-align: center;">Ч_1</td>
+                    <td style="width: 6%; text-align: center;">CP</td>
+                    <td style="width: 6%; text-align: center;">KC</td>
+                    <td style="width: 6%; text-align: center;">ЛЦ_2</td>
+                    <td style="width: 6%; text-align: center;">АР_2</td>
+                    <td style="width: 6%; text-align: center;">Ч_2</td>
+                </tr>
+                <tr class="results">
+                    <td></td><td></td><td></td><td></td><td class="white"></td><td class="white"></td><td></td><td></td><td></td>
+                </tr>
+                <tr class="results">
+                    <td></td><td></td><td></td><td></td><td class="white"></td><td class="white"></td><td></td><td></td><td></td>
+                </tr>
+                <tr class="results">
+                    <td></td><td></td><td></td><td></td><td class="white"></td><td class="white"></td><td></td><td></td><td></td>
+                </tr>
+            </tbody>
+        </form>
+    </table>
+
+    <hr><h3>Персональный месяц</h3>   
+    <table>
+        <form>
+            <tbody>
+                <tr>
+                    <td rowspan="2"><input type="text" placeholder="ДД.ММ.ГГГГ" class="goldInputs twoStrings"></td>
+                    <td colspan="3" class="green">Введите месяц и год для рассчета:</td>
+                </tr>
+                <tr>    
+                    <td><input type="text" placeholder="ММ.ГГГГ" class="goldInputs"></td>
+                    <td><input type="text" placeholder="ММ.ГГГГ" class="goldInputs"></td>
+                    <td><input type="text" placeholder="ММ.ГГГГ" class="goldInputs"></td>
+                </tr>
+                <tr class="results"><td class="green">День:</td><td></td><td></td><td></td></tr>
+                <tr class="results"><td class="green">Месяц:</td><td></td><td></td><td></td></tr>
+                <tr class="results"><td class="green">Год:</td><td></td><td></td><td></td></tr>
+                <tr>
+                    <td colspan="2"><input type="button" id="calc4" class="yellowGreen" value="Рассчитать"></td>
+                    <td colspan="2"><input type="reset" id="reset4" class="indianRed"></td>
+                </tr>
+            </tbody>
+        </form>
+    </table> 
+
+    <hr><h3>Аркан дня</h3>
+    <form>
+        <table>
+            <tr>
+                <td class="green">Дата рождения:</td><td><input type="text" placeholder="ДД.ММ.ГГГГ" class="goldInputs twoStrings2"></td>
+                <td class="green">На какой день?</td><td><input type="text" placeholder="ДД.ММ.ГГГГ" class="goldInputs twoStrings2"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="button" value="Рассчитать" class="yellowGreen" id="calc5"></td>
+                <td colspan="2"><input type="reset" class="indianRed" id="reset5"></td>
+            </tr>
+            <tr><td class="green" colspan="2">Аркан:</td><td class="green" colspan="2">Доп. энергия:</td></tr>
+            <tr><td class="results" colspan="2"></td><td class="results" colspan="2"></td></tr>
+        </table>
+    </form>
+
+    <div class="molecula">
+            <form>
+                <input type="text"  placeholder="ДД.ММ.ГГГГ" id="date1"><br>
+                <input type="text"  placeholder="ДД.ММ.ГГГГ" id="date2"><br>
+                <input type="button" value="Рассчитать" id="calc6">
+                <input type="reset" id="reset6"><br>
+                <label for="p1">&nbspП1:&nbsp&nbsp</label> <label for="p2">&nbsp&nbsp&nbspП2:</label> <br>
+                <input type="text" id="p1" class="circle" readonly>&nbsp&nbsp&nbsp&nbsp<input type="text" id="p2" class="circle" readonly><br>
+                <label for="kb" id="labelkb">КБ:</label><br> <input type="text" id="kb" class="circle" readonly><br>
+                <label for="feeleng1">ЧП1:&nbsp&nbsp</label><label for="feeleng2">&nbsp&nbspЧП2:</label><br>
+                <input type="text" id="feeling1" class="circle" readonly>&nbsp&nbsp&nbsp&nbsp<input type="text" id="feeling2" class="circle" readonly><br>
+                <label for="cb" id="labelcb">СБ:</label><br> <input type="text" id="cb" class="circle" readonly><br>
+            </form>
+    <div>
+
+      
+
+    <script>
+        let a = document.getElementsByTagName('input')
+        
+        let calc = document.getElementById('calc')
+        let reset = document.getElementById('reset')
+        let date = document.getElementById('date')
+        let cell = document.getElementsByTagName('td')
+        //ТАРОМАТРИЦА - 1
+        calc.addEventListener('click', ()=>{
+            if(date.value.includes('-') || date.value.includes(',') || date.value.length !=10){
+                date.value = "Wrong date"
+            } else {
+                let appData = {
+                    date: [],
+                    splitDate: [],
+                    destinyNumber: '0',
+                    temp1: 0,
+                    temp2: 0,
+                    temp3: 0,
+                    temp4: 0,
+                    temp5: 0,
+                }
+                //fill the table with data
+                for(let i=0; i<a[0].value.length; i++){
+                    appData.date[i] = a[0].value[i]
+                }
+                appData.splitDate = a[0].value.split('.')
+                if(appData.splitDate[0].includes('0')){appData.splitDate[0]=Math.abs(appData.splitDate[0])}
+                if(appData.splitDate[1].includes('0')){appData.splitDate[1]=Math.abs(appData.splitDate[1])}
+                //first string
+                //a[8] - КД
+                if(+appData.splitDate[0]>22){
+                    a[8].value = +appData.splitDate[0] - 22
+                } else a[8].value = appData.splitDate[0]
+                //a[9] - КМ
+                a[9].value = appData.splitDate[1]
+                //a[10] - КГ
+                for(let i=6; i<appData.date.length; i++){
+                    appData.temp1 += +appData.date[i]
+                }
+                if(appData.temp1>22){appData.temp1 = appData.temp1 - 22 }
+                a[10].value = appData.temp1
+
+                for(let i=0; i<appData.date.length; i++){
+                    if(appData.date[i] == '.'){continue}
+                    else appData.temp2 += +appData.date[i]
+                    appData.destinyNumber = String(appData.temp2) 
+                }
+                while(appData.temp2>22){appData.temp2 = appData.temp2-22}
+                a[11].value = appData.temp2
+                appData.temp3 = +a[8].value + +a[9].value + +a[10].value
+                while(appData.temp3>22){appData.temp3 = appData.temp3 - 22}
+                a[12].value = appData.temp3
+            
+                //second string
+                if((+a[8].value + +a[9].value)>22){
+                    a[14].value = (+a[8].value + +a[9].value) - 22
+                } else{a[14].value = +a[8].value + +a[9].value}
+                if(+a[8].value + +a[10].value > 22){
+                    a[15].value = (+a[8].value + +a[10].value)-22
+                } else{a[15].value = +a[8].value + +a[10].value}
+                if(+a[14].value + +a[15].value > 22){
+                    a[16].value = (+a[14].value + +a[15].value) - 22
+                } else a[16].value = +a[14].value + +a[15].value
+                if(+a[9].value + +a[10].value > 22){
+                    a[17].value = (+a[9].value + +a[10].value) - 22
+                } else a[17].value = +a[9].value + +a[10].value
+                appData.temp4 = +a[14].value + +a[15].value + +a[16].value + +a[17].value
+                while (appData.temp4 > 22){appData.temp4 = appData.temp4 - 22}
+                a[18].value = appData.temp4
+
+                //third string
+                a[20].value = Math.abs(+a[8].value - +a[9].value)
+                if(+a[20].value == 0){a[20].value = 22}
+                if(+a[20].value < 0){a[20].value = Math.abs(+a[20].value)}
+
+                a[21].value = +a[8].value - +a[10].value
+                if(+a[21].value == 0){a[21].value = 22}
+                if(+a[21].value < 0){a[21].value = Math.abs(+a[21].value)}
+
+                a[22].value = +a[20].value - +a[21].value
+                if(+a[22].value > 22){a[22].value = +a[22].value -22}
+                if(+a[22].value == 0){a[22].value = 22}
+                if(+a[22].value < 0){a[22].value = Math.abs(+a[22].value)}
+
+                a[23].value = +a[9].value - +a[10].value
+                if(+a[23].value == 0){a[23].value = 22}
+                if(+a[23].value < 0){a[23].value = Math.abs(+a[23].value)}
+
+                appData.temp5 = +a[20].value + +a[21].value + +a[22].value + +a[23].value
+                while(appData.temp5 > 22){appData.temp5 = appData.temp5 - 22}
+                a[24].value = appData.temp5
+                if(+a[24].value == 0){a[24].value = 22}
+
+                //PERIODS
+                //destinyNumber
+                while(appData.destinyNumber.length != 1){
+                    appData.destinyNumber = +appData.destinyNumber[0] + +appData.destinyNumber[1] 
+                    appData.destinyNumber = String(appData.destinyNumber)
+                }
+                a[26].value = 36 - (+appData.destinyNumber)
+                a[27].value = +a[26].value + 9
+                a[28].value = +a[27].value + 9
+                a[29].value = +a[28].value + 9
+            }
+        })
+
+        //ТАРОМАТРИЦА - 2
+        let date2 = document.getElementById('date2')
+        let calc2 = document.getElementById('calc2')
+        let reset2 = document.getElementById('reset2')
+        calc2.addEventListener('click', ()=>{
+            if(date2.value.includes('-') || date2.value.includes(',') || date2.value.length !=10){
+                date2.value = "Wrong date"
+            } else {
+                let appData = {
+                    date: [],
+                    splitDate: [],
+                    destinyNumber: '0',
+                    temp1: 0,
+                    temp2: 0,
+                    temp3: 0,
+                    temp4: 0,
+                    temp5: 0,
+                }
+                //fill the table with data
+                for(let i=0; i<a[33].value.length; i++){
+                    appData.date[i] = a[33].value[i]
+                }
+                appData.splitDate = a[33].value.split('.')
+                if(appData.splitDate[0].includes('0')){appData.splitDate[0]=Math.abs(appData.splitDate[0])}
+                if(appData.splitDate[1].includes('0')){appData.splitDate[1]=Math.abs(appData.splitDate[1])}
+                //first string
+                //a[41] - КД
+                if(+appData.splitDate[0]>22){
+                    a[41].value = +appData.splitDate[0] - 22
+                } else a[41].value = appData.splitDate[0]
+                //a[42] - КМ
+                a[42].value = appData.splitDate[1]
+                //a[43] - КГ
+                for(let i=6; i<appData.date.length; i++){
+                    appData.temp1 += +appData.date[i]
+                }
+                if(appData.temp1>22){appData.temp1 = appData.temp1 - 22 }
+                a[43].value = appData.temp1
+
+                for(let i=0; i<appData.date.length; i++){
+                    if(appData.date[i] == '.'){continue}
+                    else appData.temp2 += +appData.date[i]
+                    appData.destinyNumber = String(appData.temp2) 
+                }
+                while(appData.temp2>22){appData.temp2 = appData.temp2-22}
+                a[44].value = appData.temp2
+                appData.temp3 = +a[41].value + +a[42].value + +a[43].value
+                while(appData.temp3>22){appData.temp3 = appData.temp3 - 22}
+                a[45].value = appData.temp3
+            
+                //second string
+                //a[47]=КД+КМ и если больше 22, то отнимаем
+                if((+a[41].value + +a[42].value)>22){
+                    a[47].value = (+a[41].value + +a[42].value) - 22
+                } else{a[47].value = +a[41].value + +a[42].value}
+                //a[48]=КД+КГ и если больше 22, то отнимаем
+                if(+a[41].value + +a[43].value > 22){
+                    a[48].value = (+a[41].value + +a[43].value)-22
+                } else{a[48].value = +a[41].value + +a[43].value}
+                //a[49]=a[47]+a[48] и если больше 22, то отнимаем
+                if(+a[47].value + +a[48].value > 22){
+                    a[49].value = (+a[47].value + +a[48].value) - 22
+                } else a[49].value = +a[47].value + +a[48].value
+                //a[50]=a[42]+a[43] и если больше 22, то отнимаем
+                if(+a[42].value + +a[43].value > 22){
+                    a[50].value = (+a[42].value + +a[43].value) - 22
+                } else a[50].value = +a[42].value + +a[43].value
+                //a[51]=a[47]+a[48]+a[49]+a[50] и если больше 22, то отнимаем
+                appData.temp4 = +a[47].value + +a[48].value + +a[49].value + +a[50].value
+                while (appData.temp4 > 22){appData.temp4 = appData.temp4 - 22}
+                a[51].value = appData.temp4
+
+                //third string
+                a[53].value = Math.abs(+a[41].value - +a[42].value)
+                if(+a[53].value == 0){a[53].value = 22}
+                if(+a[53].value < 0){a[53].value = Math.abs(+a[53].value)}
+
+                a[54].value = +a[41].value - +a[43].value
+                if(+a[54].value == 0){a[54].value = 22}
+                if(+a[54].value < 0){a[54].value = Math.abs(+a[54].value)}
+
+                a[55].value = +a[53].value - +a[54].value
+                if(+a[55].value > 22){a[55].value = +a[55].value -22}
+                if(+a[55].value == 0){a[55].value = 22}
+                if(+a[55].value < 0){a[55].value = Math.abs(+a[55].value)}
+
+                a[56].value = +a[42].value - +a[43].value
+                if(+a[56].value == 0){a[56].value = 22}
+                if(+a[56].value < 0){a[56].value = Math.abs(+a[56].value)}
+
+                appData.temp5 = +a[53].value + +a[54].value + +a[55].value + +a[56].value
+                while(appData.temp5 > 22){appData.temp5 = appData.temp5 - 22}
+                a[57].value = appData.temp5
+                if(+a[57].value == 0){a[57].value = 22}
+
+                //PERIODS
+                //destinyNumber
+                while(appData.destinyNumber.length != 1){
+                    appData.destinyNumber = +appData.destinyNumber[0] + +appData.destinyNumber[1] 
+                    appData.destinyNumber = String(appData.destinyNumber)
+                }
+                a[59].value = 36 - (+appData.destinyNumber)
+                a[60].value = +a[59].value + 9
+                a[61].value = +a[60].value + 9
+                a[62].value = +a[61].value + 9
+            }
+        })
+        //------------------------------------------Прогностика по годам в паре-------------------------------
+        calc3.addEventListener('click', ()=>{
+            // ЛЦ_1
+            let fpersonCycle = +a[66].value.split('')[0] + +a[66].value.split('')[1] + +a[66].value.split('')[3] + +a[66].value.split('')[4] + 
+            +a[68].value.split('')[0] + +a[68].value.split('')[1] + +a[68].value.split('')[2] + +a[68].value.split('')[3]
+            
+            let fpersonCycle2 = +a[66].value.split('')[0] + +a[66].value.split('')[1] + +a[66].value.split('')[3] + +a[66].value.split('')[4] + 
+            +a[69].value.split('')[0] + +a[69].value.split('')[1] + +a[69].value.split('')[2] + +a[69].value.split('')[3]
+            
+            let fpersonCycle3 = +a[66].value.split('')[0] + +a[66].value.split('')[1] + +a[66].value.split('')[3] + +a[66].value.split('')[4] + 
+            +a[70].value.split('')[0] + +a[70].value.split('')[1] + +a[70].value.split('')[2] + +a[70].value.split('')[3]
+            
+            while(fpersonCycle>9){
+                fpersonCycle = +fpersonCycle.toString().split('')[0] + +fpersonCycle.toString().split('')[1]
+            }
+            while(fpersonCycle2>9){
+                fpersonCycle2 = +fpersonCycle2.toString().split('')[0] + +fpersonCycle2.toString().split('')[1]
+            }
+            while(fpersonCycle3>9){
+                fpersonCycle3 = +fpersonCycle3.toString().split('')[0] + +fpersonCycle3.toString().split('')[1]
+            }
+            // ЛЦ_2
+            let spersonCycle = +a[67].value.split('')[0] + +a[67].value.split('')[1] + +a[67].value.split('')[3] + +a[67].value.split('')[4] + 
+            +a[68].value.split('')[0] + +a[68].value.split('')[1] + +a[68].value.split('')[2] + +a[68].value.split('')[3]
+
+            let spersonCycle2 = +a[67].value.split('')[0] + +a[67].value.split('')[1] + +a[67].value.split('')[3] + +a[67].value.split('')[4] + 
+            +a[69].value.split('')[0] + +a[69].value.split('')[1] + +a[69].value.split('')[2] + +a[69].value.split('')[3]
+
+            let spersonCycle3 = +a[67].value.split('')[0] + +a[67].value.split('')[1] + +a[67].value.split('')[3] + +a[67].value.split('')[4] + 
+            +a[70].value.split('')[0] + +a[70].value.split('')[1] + +a[70].value.split('')[2] + +a[70].value.split('')[3]
+
+            while(spersonCycle>9){
+                spersonCycle = +spersonCycle.toString().split('')[0] + +spersonCycle.toString().split('')[1]
+            }
+            while(spersonCycle2>9){
+                spersonCycle2 = +spersonCycle2.toString().split('')[0] + +spersonCycle2.toString().split('')[1]
+            }
+            while(spersonCycle3>9){
+                spersonCycle3 = +spersonCycle3.toString().split('')[0] + +spersonCycle3.toString().split('')[1]
+            }
+            // AP_1
+            let year1 = +a[68].value.split('')[0] + +a[68].value.split('')[1] + +a[68].value.split('')[2] + +a[68].value.split('')[3]
+            let year2 = +a[69].value.split('')[0] + +a[69].value.split('')[1] + +a[69].value.split('')[2] + +a[69].value.split('')[3]
+            let year3 = +a[70].value.split('')[0] + +a[70].value.split('')[1] + +a[70].value.split('')[2] + +a[70].value.split('')[3]
+            while(year1>22){year1 = year1 - 22}
+            while(year2>22){year2 = year2 - 22}
+            while(year3>22){year2 = year3 - 22}
+
+            let farcanum = +a[66].value.split('.')[0] + +a[66].value.split('.')[1] + year1
+            let farcanum2 = +a[66].value.split('.')[0] + +a[66].value.split('.')[1] + year2
+            let farcanum3 = +a[66].value.split('.')[0] + +a[66].value.split('.')[1] + year3
+
+            while(farcanum>22){farcanum = farcanum-22}
+            while(farcanum2>22){farcanum2 = farcanum2-22}
+            while(farcanum3>22){farcanum3 = farcanum3-22}
+            
+            //AP_2
+            let sarcanum = +a[67].value.split('.')[0] + +a[67].value.split('.')[1] + year1
+            let sarcanum2 = +a[67].value.split('.')[0] + +a[67].value.split('.')[1] + year2
+            let sarcanum3 = +a[67].value.split('.')[0] + +a[67].value.split('.')[1] + year3
+
+            while(sarcanum>22){sarcanum = sarcanum-22}
+            while(sarcanum2>22){sarcanum2 = sarcanum2-22}
+            while(sarcanum3>22){sarcanum3 = sarcanum3-22}
+
+            //Ч_1
+            let fnumber = +a[66].value.split('')[0] + +a[66].value.split('')[1] + +a[66].value.split('')[3] + +a[66].value.split('')[4] + 
+            +a[68].value.split('')[0] + +a[68].value.split('')[1] + +a[68].value.split('')[2] + +a[68].value.split('')[3]
+            
+            let fnumber2 = +a[66].value.split('')[0] + +a[66].value.split('')[1] + +a[66].value.split('')[3] + +a[66].value.split('')[4] + 
+            +a[69].value.split('')[0] + +a[69].value.split('')[1] + +a[69].value.split('')[2] + +a[69].value.split('')[3]
+            
+            let fnumber3 = +a[66].value.split('')[0] + +a[66].value.split('')[1] + +a[66].value.split('')[3] + +a[66].value.split('')[4] + 
+            +a[70].value.split('')[0] + +a[70].value.split('')[1] + +a[70].value.split('')[2] + +a[70].value.split('')[3]
+            while(fnumber>22){fnumber = fnumber - 22}
+            while(fnumber2>22){fnumber2 = fnumber2 - 22}
+            while(fnumber3>22){fnumber3 = fnumber3 - 22}
+
+            //Ч_2
+            let snumber = +a[67].value.split('')[0] + +a[67].value.split('')[1] + +a[67].value.split('')[3] + +a[67].value.split('')[4] + 
+            +a[68].value.split('')[0] + +a[68].value.split('')[1] + +a[68].value.split('')[2] + +a[68].value.split('')[3]
+            
+            let snumber2 = +a[67].value.split('')[0] + +a[67].value.split('')[1] + +a[67].value.split('')[3] + +a[67].value.split('')[4] + 
+            +a[69].value.split('')[0] + +a[69].value.split('')[1] + +a[69].value.split('')[2] + +a[69].value.split('')[3]
+            
+            let snumber3 = +a[67].value.split('')[0] + +a[67].value.split('')[1] + +a[67].value.split('')[3] + +a[67].value.split('')[4] + 
+            +a[70].value.split('')[0] + +a[70].value.split('')[1] + +a[70].value.split('')[2] + +a[70].value.split('')[3]
+            while(snumber>22){snumber = snumber - 22}
+            while(snumber2>22){snumber2 = snumber2 - 22}
+            while(snumber3>22){snumber3 = snumber3 - 22}
+            //1-й ряд
+            if(a[68].value == ''){}
+            else{
+                cell[19].innerHTML = a[68].value
+                cell[20].innerHTML = fpersonCycle
+                cell[21].innerHTML = farcanum
+                cell[22].innerHTML = fnumber
+                let cp1 = farcanum + sarcanum ; while(cp1>22){cp1 = cp1 - 22} ; 
+                cell[23].innerHTML = cp1 
+                let kc1 = fnumber + snumber; while(kc1>22){kc1 = kc1 - 22}
+                cell[24].innerHTML = kc1
+                cell[25].innerHTML = spersonCycle
+                cell[26].innerHTML = sarcanum
+                cell[27].innerHTML = snumber
+            }
+            //2-й ряд
+            if(a[69].value == ''){}
+            else{
+                cell[28].innerHTML = a[69].value // Год
+                cell[29].innerHTML = fpersonCycle2 //ЛЦ_1
+                cell[30].innerHTML = farcanum2 //АР_1
+                cell[31].innerHTML = fnumber2 //Ч_1
+                let cp2 = farcanum2 + sarcanum2 ; while(cp2>22){cp2 = cp2 - 22} ; 
+                cell[32].innerHTML = cp2 //СР
+                let kc2 = fnumber2 + snumber2; while(kc2>22){kc2 = kc2 - 22}
+                cell[33].innerHTML = kc2 //КС
+                cell[34].innerHTML = spersonCycle2 //ЛЦ_2
+                cell[35].innerHTML = sarcanum2 //АР_2
+                cell[36].innerHTML = snumber2 //Ч_2
+            }
+            //3-й ряд
+            if(a[70].value == ''){}
+            else{
+                cell[37].innerHTML = a[70].value //Год
+                cell[38].innerHTML = fpersonCycle3 //ЛЦ_1
+                cell[39].innerHTML = farcanum3 //АР_1
+                cell[40].innerHTML = fnumber3 //Ч_1
+                let cp3 = farcanum3 + sarcanum3 ; while(cp3>22){cp3 = cp3 - 22} ; 
+                cell[41].innerHTML = cp3 //СР
+                let kc3 = fnumber3 + snumber3; while(kc3>22){kc3 = kc3 - 22}
+                cell[42].innerHTML = kc3 //КС
+                cell[43].innerHTML = spersonCycle3 //ЛЦ_2
+                cell[44].innerHTML = sarcanum3 //АР_2
+                cell[45].innerHTML = snumber3 //Ч_2
+            }
+        })
+        reset3.addEventListener('click', ()=>{
+            for(i=19; i<46; i++){cell[i].innerHTML = ''}
+        })
+        //----------------------------------------Персональный месяц-----------------------------------------------
+        calc4.addEventListener('click', ()=>{
+            //1-st row results
+            let temp = +a[73].value.split('.')[0]
+            while(temp > 22){temp = temp - 22}
+            cell[52].innerHTML = temp
+            cell[53].innerHTML = temp
+            cell[54].innerHTML = temp
+            //2-nd row results
+            temp2 = +a[73].value.split('.')[1] + +a[74].value.split('.')[0]; while(temp2>22){temp2 = temp2-22}
+            cell[56].innerHTML = temp2
+            temp3 = +a[73].value.split('.')[1] + +a[75].value.split('.')[0]; while(temp3>22){temp3 = temp3-22}
+            cell[57].innerHTML = temp3
+            temp4 = +a[73].value.split('.')[1] + +a[76].value.split('.')[0]; while(temp4>22){temp4 = temp4-22}
+            cell[58].innerHTML = temp4
+            //3-rd row results
+            
+                temp5 = 0
+                for(let i=3; i<7; i++){temp5 += +a[74].value.split('')[i]}; while(temp5>22){temp5 = temp5 - 22}
+                cell[60].innerHTML = temp5
+            
+            
+                temp6 = 0
+                for(let i=3; i<7; i++){temp6 += +a[75].value.split('')[i]}; while(temp6>22){temp6 = temp6 - 22}
+                cell[61].innerHTML = temp6
+            
+            
+                temp7 = 0
+                for(let i=3; i<7; i++){temp7 += +a[76].value.split('')[i]}; while(temp7>22){temp7 = temp7 - 22}
+                cell[62].innerHTML = temp7
+            
+            if(a[74].value == ''){cell[52].innerHTML = ''; cell[56].innerHTML = ''; cell[60].innerHTML = '';}
+            if(a[75].value == ''){cell[53].innerHTML = ''; cell[57].innerHTML = ''; cell[61].innerHTML = '';}
+            if(a[76].value == ''){cell[54].innerHTML = ''; cell[58].innerHTML = '';  cell[62].innerHTML = ''}
+        })
+        reset4.addEventListener('click',()=>{cell[52].innerHTML=''; cell[53].innerHTML=''; cell[54].innerHTML='';
+                                             cell[56].innerHTML=''; cell[57].innerHTML=''; cell[58].innerHTML='';
+                                             cell[60].innerHTML=''; cell[61].innerHTML=''; cell[62].innerHTML='';})
+        //-------------------------------------------Аркан дня---------------------------------------------------
+        let calc5 = document.getElementById('calc5')
+        let reset5 = document.getElementById('reset5')
+        calc5.addEventListener('click', ()=>{
+            let dd1 = +a[79].value.split('.')[0]
+            if(dd1>22){dd1 = dd1 - 22}
+            let dd2 = +a[80].value.split('.')[0]
+            if(dd2>22){dd2 = dd2 - 22}
+            let mm1 = +a[79].value.split('.')[1]
+            let mm2 = +a[80].value.split('.')[1]
+
+            let gg2 = a[80].value.split('.')[2]
+            let rez=0
+            for(let i=0; i<gg2.length; i++){rez += +gg2.split('')[i]; console.log(rez)}
+            while(rez>22){rez = rez - 22}
+            let arcanum = dd1 + dd2 + mm1 + mm2 + rez
+            while(arcanum>22){arcanum = arcanum - 22}
+            cell[73].innerHTML = arcanum
+            let energy = dd1 + dd2
+            while(energy>22){energy = energy -22}
+            cell[74].innerHTML = energy
+        })
+        reset5.addEventListener('click', ()=>{cell[73].innerHTML = ''; cell[74].innerHTML = ''})
+        //--------------------------------------Молекула совместимости---------------------------------------------
+        //Molecula
+        let p1 = document.getElementById('p1')
+        let p2 = document.getElementById('p2')
+        let kb = document.getElementById('kb')
+        let feeling1 = document.getElementById('feeling1')
+        let feeling2 = document.getElementById('feeling2')
+        let calc6 = document.getElementById('calc6')
+        calc6.addEventListener('click', ()=>{
+            let tmp1 = a[83].value.split('')
+            let tmp2 = a[84].value.split('')
+            let temp1 = 0
+            let temp2 = 0
+            //П1
+            for(let i=0; i<tmp1.length; i++){
+                if(tmp1[i] == '.'){continue}
+                temp1 += +tmp1[i]
+                while(temp1>22){temp1 = temp1 - 22}
+                p1.value = temp1
+            }
+            //П2
+            for(let i=0; i<tmp2.length; i++){
+                if(tmp2[i] == '.'){continue}
+                temp2 += +tmp2[i]
+                while(temp2>22){temp2 = temp2 - 22}
+                p2.value = temp2
+            }
+            //КБ
+            let tempKB = temp1 + temp2
+            while(tempKB > 22) {tempKB = tempKB - 22}
+            kb.value = tempKB
+            //ЧП1
+            let tempFeeling1 = temp1 + tempKB
+            while(tempFeeling1>22){tempFeeling1 = tempFeeling1 -22}
+            feeling1.value = tempFeeling1
+            //ЧП2
+            let tempFeeling2 = temp2 + tempKB
+            while(tempFeeling2>22){tempFeeling2 = tempFeeling2 -22}
+            feeling2.value = tempFeeling2
+            //СБ
+            let tempCB = tempKB + tempFeeling1 + tempFeeling2
+            while(tempCB>22){tempCB = tempCB - 22}
+            cb.value = tempCB
+        })
+        
+    </script>
+
+</body>
+
+<style>
+    body{
+	    background: #eee;
+    }
+
+    input, #kk, #kc, #kjp {width: 30px; padding: 2px; text-align: center;}
+    #date,#calc, #reset ,#date1, #date2, #calc2, #reset2, #calc3, #reset3, #calc4, #reset4, #calc5, #reset5, #calc6, #reset6{
+        width:85px; margin: 5px 0;
+    }
+    #calc, #calc2, #calc3, #calc4, #calc5, #calc6{background-color: yellowGreen; }
+    #reset, #reset2, #reset3, #reset4, #reset5, #reset6{background-color:indianRed;}
+    #calc3, #calc4, #calc5, #reset3, #reset4, #reset5 {width:100%;}
+
+    .yellow{background-color: yellow;}
+    .peach{background-color: #ffe5b4;}
+    .red{background-color: #eb6464;}
+    .lightgreen{background-color: #b7d792;}
+    #date,#date1,#date2{background-color: #e8f0fe;}
+    .block{display: inline-block;}
+    .molecula{position: absolute; left: 260px; top: 7px; text-align:center;}
+    .circle{border-radius: 50%; height: 25px; width: 25px; margin:0; padding-bottom: 3px; background-color: coral;}
+    .yellow{background-color: gold;}
+    .peach{background-color: #ffe5b4;}
+    .white{background-color: #bd3232; color: #3103df;}
+    .lightgreen{background-color: #b7d792;} 
+    table, td {
+        text-align: center;
+        border: 1px solid black;
+        border-collapse: collapse;
+        border-box: border-box;
+    }
+    .wrapper{
+        box-sizing: border-box;
+        margin-top: 10px;
+        text-align:center;
+    }
+    .goldInputs {
+        width:95%; 
+        background-color: #e8f0fe;
+    }
+    .twoStrings {
+        height: 40px;
+    }
+    .twoStrings2 {
+        height: 30px;
+    }
+    .green {
+        background-color: #b7d792;
+    }
+    .results{background-color: coral; height: 20px;}
+    .yellowGreen {background-color: yellowGreen; width:100%; height:30px;}
+    .indianRed {background-color: indianRed; width:100%; height:30px;}
+</style>
+
+</html>
